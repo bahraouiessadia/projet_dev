@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inscription</title>
+    <style>
+        body{
+            background-color: rgb(161, 222, 226);
+        }
+      .w3docs {
+        margin-left: 70px;
+        font-weight: bold;
+        text-align: left;
+        font-family: sans-serif, bold, Arial, Helvetica;
+        font-size: 20px;
+        
+      }
+      .buttons {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      
+       border-radius: 5px;
+      }
+      div input {
+        margin-right: 10px;
+      }
+      form {
+        margin: 0 auto;
+        width: 600px;
+       
+      }
+      form input {
+        padding: 10px;
+        border-radius: 5px;
+        
+      }
+      form select {
+        background-color: #ffffff;
+        padding: 5px;
+      }
+      form textarea {
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      form label {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">CONNEXION</h2>
+    <form name="RegForm" action="projet.html"  method="POST" class="formulaire">
+      
+      <div>
+        <label for="E-mail" l> Email:</label>
+        <input type="text" id="E-mail" size="60" name="Email" />
+      </div>
+      <br />
+      <div>
+        <label for="Mot de passe">Mot de passe:</label>
+        <input type="text" id="Mot de passe" size="60" name="Mot de passe" />
+      </div>
+      <br />
+      <div class="buttons">
+        <input type="submit" value="connexion" name="connexion" />  
+      </div>
+    </form>
+    <script>
+      function formulaire() {
+        var email = document.forms["RegForm"]["Email"];
+        var password = document.forms["RegForm"]["Mot de passe"];
+     
+        if (address.value == "") {
+          alert("Mettez votre adresse.");
+          address.focus();
+          return false;
+        }
+        if (email.value == "") {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf("@", 0) < 0) {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf(".", 0) < 0) {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        
+        if (password.value == "") {
+          alert("Saisissez votre mot de passe");
+          password.focus();
+          return false;
+        }
+       
+      }
+    </script>
+  </body>
+</html>
